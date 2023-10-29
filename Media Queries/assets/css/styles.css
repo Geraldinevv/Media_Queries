@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas: "header" "aside" "main" "footer";
+  grid-template-rows: 100px 100px 1fr 100px;
+}
+.dashboard header {
+  grid-area: header;
+  background-color: red;
+}
+.dashboard header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.dashboard header nav .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.dashboard header nav .brand h1 {
+  font-size: 30px;
+  font-weight: 800;
+}
+.dashboard header nav .brand figure {
+  width: 60px;
+}
+.dashboard header nav .brand figure img {
+  border-radius: 50%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.dashboard header nav .icon i {
+  font-size: 30px;
+}
+.dashboard header nav .menu {
+  display: none;
+}
+.dashboard aside {
+  grid-area: aside;
+  background-color: yellow;
+}
+.dashboard main {
+  grid-area: main;
+  background-color: green;
+}
+.dashboard footer {
+  grid-area: footer;
+  background-color: blue;
+}
+
+@media (min-width: 576px) {
+  .dashboard {
+    grid-template-areas: "header header header header header" "aside main main main main" "footer footer footer footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 250px;
+  }
+  .dashboard header nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  .dashboard header nav .brand figure {
+    width: 40px;
+  }
+  .dashboard header nav .icon {
+    display: none;
+  }
+  .dashboard header nav .menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+  .dashboard aside {
+    height: 100vh;
+  }
+}
+@media (min-width: 992px) {
+  .dashboard {
+    grid-template-areas: "header aside aside aside aside" "header main main main main" "footer main main main main";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 280px;
+  }
+  .dashboard header {
+    height: 100vh;
+  }
+  .dashboard header nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .dashboard header nav .brand figure {
+    width: 40px;
+  }
+  .dashboard header nav .icon {
+    display: none;
+  }
+  .dashboard header nav .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main .card_container {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+  }
+  .main .card_container .card_header {
+    min-height: 30px;
+  }
+  .main .card_container .card_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+  }
+  .main .card_container .card_body img {
+    height: 200px;
+  }
+  .main .card_container .card_footer {
+    min-height: 30px;
+  }
+}/*# sourceMappingURL=styles.css.map */
